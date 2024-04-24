@@ -5,7 +5,7 @@ import Photo from "../components/Photo";
 
 const Home = () => {
   return (
-    <main>
+    <main className="flex-col justify-center content-center ">
       <Photo />
       <News />
       <LogoLinks />

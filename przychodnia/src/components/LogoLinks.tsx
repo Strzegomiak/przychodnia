@@ -1,8 +1,9 @@
 const LogoLinks = () => {
   return (
-    <div>
-      <div className="w-10/12 h-1"></div>
-      <img src="..\images\RPP.jpg" />
+    <div className="flex justify-center content-center w-full">
+      <div className="flex items-center justify-center w-5/12">
+        <img src="../images/RPP.jpg" alt="rpp" className="" />
+      </div>
     </div>
   );
 };

@@ -1,8 +1,11 @@
 const Photo = () => {
   return (
-    <div className="w-10/12 h-1">
-      <img></img>
-      <></>
+    <div className="flex justify-center content-center h-96 w-full">
+      <img
+        src="../images/MainPhoto.png"
+        alt="mainPhoto"
+        className="w-full object-cover"
+      />
     </div>
   );
 };
