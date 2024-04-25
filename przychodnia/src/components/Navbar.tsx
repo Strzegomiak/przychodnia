@@ -55,6 +55,7 @@
 // export default Navbar;import { useState, useRef } from "react";
 
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [activeProfile, setActiveProfile] = useState<string | null>(null);
@@ -69,33 +70,33 @@ const Navbar = () => {
     setDelayedClose(
       setTimeout(() => {
         setActiveProfile(null);
-      }, 1000)
-    ); // Opóźnienie 1 sekundy przed ukryciem profilu po opuszczeniu myszy
-  };
-
-  const handleListMouseLeave = () => {
-    setActiveProfile("profile1");
+      }, 500)
+    );
   };
 
   return (
     <nav className="flex justify-center content-center bg-red-400 w-full h-24 ">
       <ul className="flex gap-12 items-center text-2xl relative">
-        <li>Start</li>
+        <Link to={"/"}>
+          <li>Start</li>
+        </Link>
         <li
           onMouseEnter={() => handleMouseEnter("profile1")}
           onMouseLeave={handleMouseLeave}
         >
           O nas
         </li>
-        {(activeProfile === "profile1" ||
-          activeProfile === "profile1-content") && (
+        {activeProfile === "profile1" && (
           <div
             className="absolute h-22 inset-y-24 inset-x-20 w-32"
-            onMouseEnter={() => setActiveProfile("profile1-content")}
-            onMouseLeave={handleListMouseLeave}
+            onMouseEnter={() => handleMouseEnter("profile1")}
+            onMouseLeave={handleMouseLeave}
+            onClick={() => setActiveProfile(null)}
           >
             <ul className="bg-red-600 p-4 gap-2">
-              <li>Historia</li>
+              <Link to={"/historia"}>
+                <li>Historia</li>
+              </Link>
               <li>Dyrekcja</li>
             </ul>
           </div>
@@ -106,12 +107,12 @@ const Navbar = () => {
         >
           Dla pacjenta
         </li>
-        {(activeProfile === "profile2" ||
-          activeProfile === "profile2-content") && (
+        {activeProfile === "profile2" && (
           <div
             className="absolute h-22 inset-y-24 inset-x-48 w-60"
-            onMouseEnter={() => setActiveProfile("profile2-content")}
-            onMouseLeave={() => setActiveProfile("profile2")}
+            onMouseEnter={() => handleMouseEnter("profile2")}
+            onMouseLeave={handleMouseLeave}
+            onClick={() => setActiveProfile(null)}
           >
             <ul className="bg-blue-600 p-4 gap-2">
               <li>Karta Praw Pacjenta</li>
@@ -128,12 +129,12 @@ const Navbar = () => {
         >
           Działalność medyczna
         </li>
-        {(activeProfile === "profile3" ||
-          activeProfile === "profile3-content") && (
+        {activeProfile === "profile3" && (
           <div
             className="absolute h-22 inset-y-24 inset-x-96 w-80"
-            onMouseEnter={() => setActiveProfile("profile3-content")}
-            onMouseLeave={() => setActiveProfile("profile3")}
+            onMouseEnter={() => handleMouseEnter("profile3")}
+            onMouseLeave={handleMouseLeave}
+            onClick={() => setActiveProfile(null)}
           >
             <ul className="bg-green-600 p-4 gap-2">
               <li>Poradnie POZ</li>
