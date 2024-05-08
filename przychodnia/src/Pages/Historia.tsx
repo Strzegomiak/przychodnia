@@ -1,28 +1,7 @@
-import { GraphQLClient, gql } from "graphql-request";
-import { useEffect, useState } from "react";
+import { gql } from "graphql-request";
 import useFetch from "../hook/useFetch";
 
 const Historia = () => {
-  // const provider = new GraphQLClient(
-  //   "https://api-eu-west-2.hygraph.com/v2/clvteh58i0npg07usbp0ruz7n/master"
-  // );
-  // const query = gql`
-  //   {
-  //     historia123 {
-  //       id
-  //       opis {
-  //         html
-  //       }
-  //     }
-  //   }
-  // `;
-  // try {
-  //   const data: any = await provider.request(query);
-  //   console.log(data);
-  //   setHistory(data.historia123);
-  // } catch (error: any) {
-  //   console.log(error.message);
-  // }
   const query = gql`
     {
       historia123 {
@@ -34,16 +13,23 @@ const Historia = () => {
     }
   `;
   const nameAPI = "historia123";
-  const { values } = useFetch(query, nameAPI);
-  console.log(values);
+  const { values } = useFetch(query);
+
   return (
-    <div className="flex justify-center content-center">
-      <h1>Historia</h1>
-      {values !== undefined &&
-        values.historia123.map((x: any) => {
-          const text = x.opis.html.replace(/<\/?p>/g, "");
-          return <p key={x.id}>{text}</p>;
-        })}
+    <div className="flex justify-center content-center relative">
+      <div className="flex-col justify-center items-center  w-10/12 bg-red-100 px-28 py-10">
+        <h1>Historia</h1>
+        <br></br>
+        {values &&
+          values[nameAPI] &&
+          values[nameAPI].map((item: any) => (
+            <div
+              key={item.id}
+              className="whitespace-pre-wrap"
+              dangerouslySetInnerHTML={{ __html: item.opis.html }}
+            />
+          ))}
+      </div>
     </div>
   );
 };

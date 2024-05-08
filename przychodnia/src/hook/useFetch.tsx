@@ -1,7 +1,8 @@
+import { astToHtmlString } from "@graphcms/rich-text-html-renderer";
 import { GraphQLClient, gql } from "graphql-request";
 import { useEffect, useState } from "react";
 
-const useFetch = (query: any, nameAPI: any) => {
+const useFetch = (query: any) => {
   const [values, setValues] = useState<any>();
 
   useEffect(() => {
@@ -14,12 +15,14 @@ const useFetch = (query: any, nameAPI: any) => {
         const data: any = await provider.request(query);
         console.log(data);
         setValues(data);
+        return data;
       } catch (error: any) {
         console.log(error.message);
       }
     };
+
     fetchData();
-  }, [query, nameAPI]);
+  }, [query]);
 
   return { values };
 };
