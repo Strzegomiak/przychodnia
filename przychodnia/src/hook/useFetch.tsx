@@ -15,7 +15,7 @@ const useFetch = (query: any) => {
         const data: any = await provider.request(query);
         console.log(data);
         setValues(data);
-        return data;
+        // return data;
       } catch (error: any) {
         console.log(error.message);
       }
@@ -23,7 +23,6 @@ const useFetch = (query: any) => {
 
     fetchData();
   }, [query]);
-
   return { values };
 };
 
