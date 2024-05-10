@@ -6,7 +6,7 @@ const HeaderInfo = () => {
           Samodzielny Publiczny Gminny <br /> Zakład Opieki Zdrowotnej <br /> w
           Zaleszanach z/s w Zbydniowie
         </h1>
-        <div className="flex w-60 justify-center items-center bg-red-700 absolute right-48">
+        <div className="flex w-60 justify-center items-center bg-red-700  right-48">
           licznik
         </div>
       </div>

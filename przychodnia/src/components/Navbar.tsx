@@ -61,7 +61,9 @@ const Navbar = () => {
             onClick={() => setActiveProfile(null)}
           >
             <ul className="bg-blue-600 p-4 gap-2">
-              <li>Karta Praw Pacjenta</li>
+              <Link to={"/kartapraw"}>
+                <li>Karta Praw Pacjenta</li>
+              </Link>
               <li>RODO</li>
               <li>Skargi i wnioski</li>
               <li>Pliki do pobrania</li>
