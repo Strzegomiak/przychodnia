@@ -1,21 +1,21 @@
 import { gql } from "graphql-request";
 import useFetch from "../hook/useFetch";
 
-const Dyrekcja = () => {
-  const query = gql`
-    {
-      dyrekcja123 {
-        opis
-      }
-    }
-  `;
-  const nameAPI = "dyrekcja123";
+const Powtarzalny = ({
+  query,
+  nameAPI,
+  title,
+}: {
+  query: any;
+  nameAPI: any;
+  title: any;
+}) => {
   const { values } = useFetch(query);
 
   return (
-    <div className="flex justify-center content-center ">
-      <div className="flex-col justify-center items-center  w-10/12 bg-red-100 px-28 py-10">
-        <h1>Dyrekcja</h1>
+    <div className="flex justify-center items-center">
+      <div className="flex flex-col justify-center items-center w-10/12 bg-red-100 px-28 py-10 text-left">
+        <h1 className="text-center">{title}</h1>
         <br></br>
         {values &&
           values[nameAPI] &&
@@ -31,4 +31,4 @@ const Dyrekcja = () => {
   );
 };
 
-export default Dyrekcja;
+export default Powtarzalny;

@@ -64,8 +64,12 @@ const Navbar = () => {
               <Link to={"/kartapraw"}>
                 <li>Karta Praw Pacjenta</li>
               </Link>
-              <li>RODO</li>
-              <li>Skargi i wnioski</li>
+              <Link to={"/rodo"}>
+                <li>RODO</li>
+              </Link>
+              <Link to={"/skargiiwnioski"}>
+                <li>Skargi i wnioski</li>
+              </Link>
               <li>Pliki do pobrania</li>
               <li>Cennik</li>
             </ul>
@@ -90,11 +94,15 @@ const Navbar = () => {
               <li>Poradnie stomatologiczne</li>
               <li>Poradnie rehabilitacji</li>
               <li>Programy profilaktyczne</li>
-              <li>Opieka całodobowa</li>
+              <Link to={"/opiekacalodobowa"}>
+                <li>Opieka całodobowa</li>
+              </Link>
             </ul>
           </div>
         )}
-        <li>Kontakt</li>
+        <Link to={"/kontakt"}>
+          <li>Kontakt</li>
+        </Link>
       </ul>
     </nav>
   );
