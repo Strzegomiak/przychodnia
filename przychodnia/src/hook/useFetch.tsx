@@ -1,4 +1,3 @@
-import { astToHtmlString } from "@graphcms/rich-text-html-renderer";
 import { GraphQLClient, gql } from "graphql-request";
 import { useEffect, useState } from "react";
 

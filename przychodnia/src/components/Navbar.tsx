@@ -71,7 +71,9 @@ const Navbar = () => {
                 <li>Skargi i wnioski</li>
               </Link>
               <li>Pliki do pobrania</li>
-              <li>Cennik</li>
+              <Link to={"/cennik"}>
+                <li>Cennik</li>
+              </Link>
             </ul>
           </div>
         )}

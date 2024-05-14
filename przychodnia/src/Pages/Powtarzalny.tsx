@@ -1,4 +1,3 @@
-import { gql } from "graphql-request";
 import useFetch from "../hook/useFetch";
 
 const Powtarzalny = ({
