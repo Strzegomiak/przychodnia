@@ -95,7 +95,9 @@ const Navbar = () => {
               <li>Poradnie specjalistyczne</li>
               <li>Poradnie stomatologiczne</li>
               <li>Poradnie rehabilitacji</li>
-              <li>Programy profilaktyczne</li>
+              <Link to={"/badaniaprofilaktyczne"}>
+                <li>Programy profilaktyczne</li>
+              </Link>
               <Link to={"/opiekacalodobowa"}>
                 <li>Opieka całodobowa</li>
               </Link>

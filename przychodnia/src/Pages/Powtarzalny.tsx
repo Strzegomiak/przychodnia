@@ -19,7 +19,7 @@ const Powtarzalny = ({
         {values &&
           values[nameAPI] &&
           values[nameAPI].map((item: any) => (
-            <div
+            <h2
               key={item.id}
               className="whitespace-pre-wrap"
               dangerouslySetInnerHTML={{ __html: item.opis }}

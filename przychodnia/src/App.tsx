@@ -7,10 +7,11 @@ import Footer from "./components/Footer";
 import Powtarzalny from "./Pages/Powtarzalny";
 import { gql } from "graphql-request";
 import Cennik from "./Pages/Cennik";
+import BadaniaProfilaktyczne from "./Pages/BadaniaProfilaktyczne";
 
 const dyrekcjaQuery = gql`
   {
-    dyrekcja123(first: 100) {
+    dyrekcja123 {
       opis
     }
   }
@@ -18,7 +19,7 @@ const dyrekcjaQuery = gql`
 
 const rodoOpis = gql`
   {
-    rodo123(first: 100) {
+    rodo123 {
       opis
     }
   }
@@ -26,7 +27,7 @@ const rodoOpis = gql`
 
 const historiaQuery = gql`
   {
-    historia123(first: 100) {
+    historia123 {
       opis
     }
   }
@@ -34,7 +35,7 @@ const historiaQuery = gql`
 
 const kartaPrawQuery = gql`
   {
-    kartaPraw123(first: 100) {
+    kartaPraw123 {
       opis
     }
   }
@@ -42,7 +43,7 @@ const kartaPrawQuery = gql`
 
 const skargiWnioskiQuery = gql`
   {
-    skargiWnioski123(first: 100) {
+    skargiWnioski123 {
       opis
     }
   }
@@ -50,7 +51,7 @@ const skargiWnioskiQuery = gql`
 
 const kontaktQuery = gql`
   {
-    kontakt123(first: 100) {
+    kontakt123 {
       opis
     }
   }
@@ -58,7 +59,7 @@ const kontaktQuery = gql`
 
 const opiekaCalodobowaQuery = gql`
   {
-    opiekaCalodobowa123(first: 100) {
+    opiekaCalodobowa123 {
       opis
     }
   }
@@ -73,6 +74,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/cennik" element={<Cennik />} />
+          <Route
+            path="/badaniaprofilaktyczne"
+            element={<BadaniaProfilaktyczne />}
+          />
           <Route
             path="/historia"
             element={

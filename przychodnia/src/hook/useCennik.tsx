@@ -1,43 +1,58 @@
 import { useEffect, useState } from "react";
 import useFetch from "./useFetch";
 
-const useCennik = (query: any) => {
-  const [data, setData] = useState({}); // Initialize state to null to indicate loading
-  const { values } = useFetch(query); // Get loading state from useFetch
+interface CennikData {
+  valuesGinekologia: any[];
+  valuesPoz: any[];
+  valuesZabiegowy: any[];
+  valuesPoradniaRehabilitacyjna: any[];
+  valuesRehabilitacja: any[];
+}
+
+const useCennik = (query: any): CennikData => {
+  const [data, setData] = useState<CennikData>({
+    valuesGinekologia: [],
+    valuesPoz: [],
+    valuesZabiegowy: [],
+    valuesPoradniaRehabilitacyjna: [],
+    valuesRehabilitacja: [],
+  });
+
+  const { values } = useFetch(query);
 
   useEffect(() => {
     if (values) {
-      // Check if values are available
-      const valuesGinekologia = values.cennik123.filter(
+      const ginekologia = values.cennik123.filter(
         (offers: any) => offers.klinika === "PORADNIA GINEKOLOGICZNA"
       );
 
-      const valuesPoz = values.cennik123.filter(
+      const poz = values.cennik123.filter(
         (offers: any) => offers.klinika === "PORADNIA POZ"
       );
 
-      const valuesZabiegowy = values.cennik123.filter(
+      const zabiegowy = values.cennik123.filter(
         (offers: any) => offers.klinika === "GABINET ZABIEGOWY"
       );
 
-      const valuesPoradniaRehabilitacyjna = values.cennik123.filter(
+      const poradniaRehabilitacyjna = values.cennik123.filter(
         (offers: any) => offers.klinika === "PORADNIA REHABILITACYJNA"
       );
-      const valuesRehabilitacja = values.cennik123.filter(
+
+      const rehabilitacja = values.cennik123.filter(
         (offers: any) => offers.klinika === "REHABILITACJA"
       );
-      // Update state with filtered data
+
       setData({
-        valuesGinekologia,
-        valuesPoz,
-        valuesZabiegowy,
-        valuesPoradniaRehabilitacyjna,
-        valuesRehabilitacja,
+        valuesGinekologia: ginekologia,
+        valuesPoz: poz,
+        valuesZabiegowy: zabiegowy,
+        valuesPoradniaRehabilitacyjna: poradniaRehabilitacyjna,
+        valuesRehabilitacja: rehabilitacja,
       });
     }
-  }, [values]); // Re-run only when values change
+  }, [values]);
 
-  return { data }; // Return data and loading state
+  return data;
 };
 
 export default useCennik;

@@ -13,8 +13,16 @@ const Cennik = () => {
       }
     }
   `;
-  const { data } = useCennik(cennikQuery);
-  console.log(data);
+
+  const {
+    valuesGinekologia,
+    valuesPoz,
+    valuesZabiegowy,
+    valuesPoradniaRehabilitacyjna,
+    valuesRehabilitacja,
+  } = useCennik(cennikQuery);
+
+  console.log(valuesGinekologia);
 
   return (
     <div className="flex justify-center items-center">
@@ -24,17 +32,33 @@ const Cennik = () => {
           Opieki Zdrowotnej w Zaleszanach z/s w Zbydniowie
         </h1>
         <br></br>
-        {/* {values &&
-          values[nameAPI] &&
-          values[nameAPI].map((item: any) => (
-            <div
-              key={item.id}
-              className="whitespace-pre-wrap"
-              dangerouslySetInnerHTML={{ __html: item.opis }}
-            />
-          ))} */}
         <div>
-          <DenseTable />
+          <div>
+            <h2>PORADNIA POZ</h2>
+            <DenseTable valuesArray={valuesPoz} />
+            <br></br>
+          </div>
+          <div>
+            <h2>PORADNIA GINEKOLOGICZNA</h2>
+            <DenseTable valuesArray={valuesGinekologia} />
+          </div>
+          <br></br>
+          <div>
+            <h2>PORADNIA REHABILITACYJNA</h2>
+            <DenseTable valuesArray={valuesPoradniaRehabilitacyjna} />
+          </div>
+          <br></br>
+
+          <div>
+            <h2>GABINET ZABIEGOWY</h2>
+            <DenseTable valuesArray={valuesRehabilitacja} />
+          </div>
+          <br></br>
+          <div>
+            <h2>REHABILITACJA</h2>
+            <DenseTable valuesArray={valuesZabiegowy} />
+          </div>
+          <br></br>
         </div>
       </div>
     </div>

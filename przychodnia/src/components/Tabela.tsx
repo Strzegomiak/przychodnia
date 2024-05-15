@@ -7,19 +7,14 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 
-function createData(name: string, price: number) {
-  return { name, price };
-}
+export default function DenseTable({ valuesArray }: any) {
+  const rows = valuesArray.map((x: any) => {
+    return {
+      name: x.nazwa,
+      price: x.cenaAlternatywna ? x.cenaAlternatywna : x.cena,
+    };
+  });
 
-const rows = [
-  createData("Frozen yoghurt", 159),
-  createData("Ice cream sandwich", 237),
-  createData("Eclair", 26),
-  createData("Cupcake", 305),
-  createData("Gingerbread", 356),
-];
-
-export default function DenseTable() {
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
@@ -30,7 +25,7 @@ export default function DenseTable() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
+          {rows.map((row: any) => (
             <TableRow
               key={row.name}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}

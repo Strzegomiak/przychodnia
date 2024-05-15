@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
-    <footer className="flex justify-center content-center ">
-      <div className="flex justify-center items-center w-10/12 h-52 bg-red-300 gap-20 text-xl">
+    <footer className="flex justify-center content-center w-full bg-red-300">
+      <div className="flex justify-center items-center h-52  gap-20 text-xl">
         <div className="flex-col ">
           <h2 className="font-bold">
             Samodzielny Publiczny Gminny Zakład Opieki Zdrowotnej <br /> w
