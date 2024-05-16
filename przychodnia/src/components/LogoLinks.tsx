@@ -1,63 +1,81 @@
 const LogoLinks = () => {
   return (
     <div className="flex-col justify-center content-center w-full">
+      <div className="flex justify-center content-center w-full bg-blue-400">
+        <div className="flex items-center justify-center w-4/12 cursor-pointer">
+          <img
+            src="../images/RPP.jpg"
+            title="Rzecznik Praw Pacjenta"
+            alt="Rzecznik Praw Pacjenta"
+            className=""
+            onClick={() =>
+              (window.location.href = "https://www.gov.pl/web/rpp/kontakt")
+            }
+          />
+        </div>
+      </div>
       <div className="flex">
         <div className="flex items-center justify-center w-5/12 cursor-pointer">
           <img
             src="../images/nfz.png"
-            alt="nfz"
+            title="Narodowy Fundusz Zdrowia"
+            alt="Narodowy Fundusz Zdrowia"
             className=""
-            onClick={() => (window.location.href = "https://www.google.pl")}
+            onClick={() =>
+              (window.location.href =
+                "https://www.nfz.gov.pl/dla-pacjenta/poradnik-pacjenta/")
+            }
           />
         </div>
         <div className="flex items-center justify-center w-5/12 cursor-pointer">
           <img
             src="../images/dietynfz.png"
-            alt="nfz"
+            title="Diety NFZ"
+            alt="Diety NFZ"
             className=""
-            onClick={() => (window.location.href = "https://www.google.pl")}
+            onClick={() => (window.location.href = "https://diety.nfz.gov.pl/")}
           />
         </div>
         <div className="flex items-center justify-center w-5/12 cursor-pointer">
           <img
             src="../images/pacjentgov.png"
-            alt="nfz"
+            title="Pacjent gov"
+            alt="Pacjent gov"
             className=""
-            onClick={() => (window.location.href = "https://www.google.pl")}
+            onClick={() => (window.location.href = "https://pacjent.gov.pl/")}
           />
         </div>
         <div className="flex items-center justify-center w-5/12 cursor-pointer">
           <img
             src="../images/rrs.png"
-            alt="nfz"
+            title="Rzecznik Praw Pacjenta"
+            alt="Rzecznik Praw Pacjenta"
             className=""
-            onClick={() => (window.location.href = "https://www.google.pl")}
+            onClick={() =>
+              (window.location.href = "https://www.gov.pl/web/rpp/kontakt")
+            }
           />
         </div>
         <div className="flex items-center justify-center w-5/12 cursor-pointer">
           <img
             src="../images/informator.png"
-            alt="nfz"
+            alt="Informator NFZ"
+            title="Informator NFZ"
             className=""
-            onClick={() => (window.location.href = "https://www.google.pl")}
+            onClick={() =>
+              (window.location.href = "https://terminyleczenia.nfz.gov.pl/")
+            }
           />
         </div>
         <div className="flex items-center justify-center w-5/12 cursor-pointer">
           <img
             src="../images/szpitalstalowa.png"
-            alt="nfz"
+            title="Szpital Stalowa Wola"
+            alt="Szpital Stalowa Wola"
             className=""
-            onClick={() => (window.location.href = "https://www.google.pl")}
-          />
-        </div>
-      </div>
-      <div className="flex justify-center content-center w-full">
-        <div className="flex items-center justify-center w-4/12 cursor-pointer">
-          <img
-            src="../images/RPP.jpg"
-            alt="rpp"
-            className=""
-            onClick={() => (window.location.href = "https://www.google.pl")}
+            onClick={() =>
+              (window.location.href = "https://www.szpital-stw.com/")
+            }
           />
         </div>
       </div>

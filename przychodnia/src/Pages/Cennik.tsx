@@ -1,5 +1,5 @@
 import { gql } from "graphql-request";
-import DenseTable from "../components/Tabela";
+import DenseTable from "../components/TabelaCennik";
 import useCennik from "../hook/useCennik";
 
 const Cennik = () => {

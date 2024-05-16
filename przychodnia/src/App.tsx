@@ -8,11 +8,16 @@ import Powtarzalny from "./Pages/Powtarzalny";
 import { gql } from "graphql-request";
 import Cennik from "./Pages/Cennik";
 import BadaniaProfilaktyczne from "./Pages/BadaniaProfilaktyczne";
+import PoradniePoz from "./Pages/PoradniePOZ";
+import PoradnieStomatologiczne from "./Pages/PoradnieStomatologiczne";
+import PoradnieSpecjalistyczne from "./Pages/PoradnieSpecjalistyczne";
+import PracowniaRehabilitacji from "./Pages/PracowniaRehabilitacji";
 
 const dyrekcjaQuery = gql`
   {
     dyrekcja123 {
       opis
+      id
     }
   }
 `;
@@ -21,6 +26,7 @@ const rodoOpis = gql`
   {
     rodo123 {
       opis
+      id
     }
   }
 `;
@@ -29,6 +35,7 @@ const historiaQuery = gql`
   {
     historia123 {
       opis
+      id
     }
   }
 `;
@@ -37,6 +44,7 @@ const kartaPrawQuery = gql`
   {
     kartaPraw123 {
       opis
+      id
     }
   }
 `;
@@ -45,6 +53,7 @@ const skargiWnioskiQuery = gql`
   {
     skargiWnioski123 {
       opis
+      id
     }
   }
 `;
@@ -53,6 +62,7 @@ const kontaktQuery = gql`
   {
     kontakt123 {
       opis
+      id
     }
   }
 `;
@@ -61,6 +71,7 @@ const opiekaCalodobowaQuery = gql`
   {
     opiekaCalodobowa123 {
       opis
+      id
     }
   }
 `;
@@ -77,6 +88,19 @@ function App() {
           <Route
             path="/badaniaprofilaktyczne"
             element={<BadaniaProfilaktyczne />}
+          />
+          <Route path="/poradniepoz" element={<PoradniePoz />} />
+          <Route
+            path="/poradniestomatologiczne"
+            element={<PoradnieStomatologiczne />}
+          />
+          <Route
+            path="/poradniespecjalistyczne"
+            element={<PoradnieSpecjalistyczne />}
+          />
+          <Route
+            path="/pracowniarehabilitacji"
+            element={<PracowniaRehabilitacji />}
           />
           <Route
             path="/historia"

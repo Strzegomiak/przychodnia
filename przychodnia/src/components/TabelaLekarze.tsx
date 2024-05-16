@@ -1,4 +1,3 @@
-import * as React from "react";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -10,8 +9,8 @@ import Paper from "@mui/material/Paper";
 export default function DenseTable({ valuesArray }: any) {
   const rows = valuesArray.map((x: any) => {
     return {
-      name: x.nazwa,
-      price: x.cenaAlternatywna ? x.cenaAlternatywna : x.cena,
+      name: `${x.nazwisko}, ${x.specjalizacja}`,
+      days: x.dni,
     };
   });
 
@@ -20,8 +19,8 @@ export default function DenseTable({ valuesArray }: any) {
       <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
         <TableHead>
           <TableRow>
-            <TableCell>Nazwa usługi</TableCell>
-            <TableCell align="right">Cena (zł)</TableCell>
+            <TableCell>lekarz przyjmujący</TableCell>
+            <TableCell align="right">dni tygodnia</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -33,7 +32,7 @@ export default function DenseTable({ valuesArray }: any) {
               <TableCell component="th" scope="row">
                 {row.name}
               </TableCell>
-              <TableCell align="right">{row.price}</TableCell>
+              <TableCell align="right">{row.days}</TableCell>
             </TableRow>
           ))}
         </TableBody>

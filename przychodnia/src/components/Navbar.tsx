@@ -91,10 +91,18 @@ const Navbar = () => {
             onClick={() => setActiveProfile(null)}
           >
             <ul className="bg-green-600 p-4 gap-2">
-              <li>Poradnie POZ</li>
-              <li>Poradnie specjalistyczne</li>
-              <li>Poradnie stomatologiczne</li>
-              <li>Poradnie rehabilitacji</li>
+              <Link to={"/poradniepoz"}>
+                <li>Poradnie POZ</li>
+              </Link>
+              <Link to={"/poradniespecjalistyczne"}>
+                <li>Poradnie specjalistyczne</li>
+              </Link>
+              <Link to={"/poradniestomatologiczne"}>
+                <li>Poradnie stomatologiczne</li>
+              </Link>
+              <Link to={"/pracowniarehabilitacji"}>
+                <li>Pracownia rehabilitacji</li>
+              </Link>
               <Link to={"/badaniaprofilaktyczne"}>
                 <li>Programy profilaktyczne</li>
               </Link>

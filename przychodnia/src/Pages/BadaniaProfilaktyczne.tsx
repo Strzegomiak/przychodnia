@@ -7,6 +7,7 @@ const BadaniaProfilaktyczne = () => {
       badaniaProfilaktyczne123 {
         opis
         tytulBadania
+        id
       }
     }
   `;
