@@ -1,5 +1,6 @@
 import { gql } from "graphql-request";
 import useFetch from "../hook/useFetch";
+import FileDownloadIcon from "@mui/icons-material/FileDownload";
 
 const PlikiDoPobrania = () => {
   const sss = gql`
@@ -23,14 +24,20 @@ const PlikiDoPobrania = () => {
       <div className="flex flex-col justify-center items-center w-10/12 bg-red-100 px-28 py-10 text-left">
         <h1>Pliki do Pobrania</h1>
         <br></br>
-        <ul>
+        <ul className="list-disc text-pink-800">
           {values &&
             values["plikiDoPobrania123"] &&
             values["plikiDoPobrania123"].map((x: any) => (
-              <li key={x.id}>
-                <p>{x.opis}</p>
+              <li key={x.id} className="flex-col">
                 <a href={x.plikiDoPobrania123[0].url} download>
-                  {`${x.plikiDoPobrania123[0].fileName}`}
+                  <div className="flex">
+                    <h2>{x.opis}</h2>
+                    <FileDownloadIcon
+                      fontSize="large"
+                      className="text-pink-800"
+                      titleAccess={`${x.plikiDoPobrania123[0].fileName}`}
+                    />
+                  </div>
                 </a>
               </li>
             ))}
