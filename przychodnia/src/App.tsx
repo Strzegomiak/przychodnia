@@ -12,6 +12,7 @@ import PoradniePoz from "./Pages/PoradniePOZ";
 import PoradnieStomatologiczne from "./Pages/PoradnieStomatologiczne";
 import PoradnieSpecjalistyczne from "./Pages/PoradnieSpecjalistyczne";
 import PracowniaRehabilitacji from "./Pages/PracowniaRehabilitacji";
+import PlikiDoPobrania from "./Pages/PlikiDoPobrania";
 
 const dyrekcjaQuery = gql`
   {
@@ -85,6 +86,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/cennik" element={<Cennik />} />
+          <Route path="/plikidopobrania" element={<PlikiDoPobrania />} />
           <Route
             path="/badaniaprofilaktyczne"
             element={<BadaniaProfilaktyczne />}

@@ -70,7 +70,9 @@ const Navbar = () => {
               <Link to={"/skargiiwnioski"}>
                 <li>Skargi i wnioski</li>
               </Link>
-              <li>Pliki do pobrania</li>
+              <Link to={"/plikidopobrania"}>
+                <li>Pliki do pobrania</li>
+              </Link>
               <Link to={"/cennik"}>
                 <li>Cennik</li>
               </Link>

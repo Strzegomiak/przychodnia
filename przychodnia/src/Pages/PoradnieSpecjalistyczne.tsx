@@ -24,12 +24,6 @@ const PoradnieSpecjalistyczne = () => {
   `;
   const { values } = useFetch(PoradniePOZQuery);
   const {
-    valuesPoradniaZbydniow,
-    valuesPoradniaZaleszany,
-    valuesPoradniaTurbia,
-    valuesPoradniaStomatologiiZbydniow,
-    valuesPoradniaStomatologiiZaleszany,
-    valuesPoradniaStomatologiiTurbia,
     valuesPoradniaGinekologicznoPoloznicza,
     valuesPoradniaRehabilitacyjna,
   } = useDoktorzy(doktorzyKlinikiQuery);
