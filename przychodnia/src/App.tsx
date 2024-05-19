@@ -13,6 +13,7 @@ import PoradnieStomatologiczne from "./Pages/PoradnieStomatologiczne";
 import PoradnieSpecjalistyczne from "./Pages/PoradnieSpecjalistyczne";
 import PracowniaRehabilitacji from "./Pages/PracowniaRehabilitacji";
 import PlikiDoPobrania from "./Pages/PlikiDoPobrania";
+import MapGoogle from "./components/MapGoogle";
 
 const dyrekcjaQuery = gql`
   {
@@ -153,11 +154,14 @@ function App() {
           <Route
             path="/kontakt"
             element={
-              <Powtarzalny
-                query={kontaktQuery}
-                nameAPI="kontakt123"
-                title={"Kontakt"}
-              />
+              <>
+                <Powtarzalny
+                  query={kontaktQuery}
+                  nameAPI="kontakt123"
+                  title={"Kontakt"}
+                />
+                <MapGoogle />
+              </>
             }
           />
           <Route
