@@ -6,20 +6,12 @@ import DenseTable from "../components/TabelaLekarze";
 const PoradniePoz = () => {
   const PoradniePOZQuery = gql`
     {
-      poradniaZaleszany123 {
-        opis
-      }
-      poradniaTurbia123 {
-        opis
-      }
-      poradniaZbydniow123 {
-        opis
-      }
-      poradniaPoloznej123 {
-        opis
-      }
-      poradniaPielegniarki123 {
-        opis
+      poradniePoz123 {
+        opisPielegniarka
+        opisPolozna
+        opisTurbia
+        opisZaleszany
+        opisZbydniow
       }
     }
   `;
@@ -49,13 +41,13 @@ const PoradniePoz = () => {
         <br></br>
         <h2 className="text-center">Poradnia POZ w Zbydniowie</h2>
         {values &&
-          values["poradniaZbydniow123"] &&
-          values["poradniaZbydniow123"].map((item: any) => (
+          values["poradniePoz123"] &&
+          values["poradniePoz123"].map((item: any) => (
             <>
               <h2
                 key={item.id}
                 className="whitespace-pre-wrap"
-                dangerouslySetInnerHTML={{ __html: item.opis }}
+                dangerouslySetInnerHTML={{ __html: item.opisZbydniow }}
               />
             </>
           ))}
@@ -63,13 +55,13 @@ const PoradniePoz = () => {
         <br></br>
         <h2 className="text-center">Poradnia POZ w Zaleszanach</h2>
         {values &&
-          values["poradniaZaleszany123"] &&
-          values["poradniaZaleszany123"].map((item: any) => (
+          values["poradniePoz123"] &&
+          values["poradniePoz123"].map((item: any) => (
             <>
               <h2
                 key={item.id}
                 className="whitespace-pre-wrap"
-                dangerouslySetInnerHTML={{ __html: item.opis }}
+                dangerouslySetInnerHTML={{ __html: item.opisZaleszany }}
               />
             </>
           ))}
@@ -77,13 +69,13 @@ const PoradniePoz = () => {
         <br></br>
         <h2 className="text-center">Poradnia POZ w Turbi</h2>
         {values &&
-          values["poradniaTurbia123"] &&
-          values["poradniaTurbia123"].map((item: any) => (
+          values["poradniePoz123"] &&
+          values["poradniePoz123"].map((item: any) => (
             <>
               <h2
                 key={item.id}
                 className="whitespace-pre-wrap"
-                dangerouslySetInnerHTML={{ __html: item.opis }}
+                dangerouslySetInnerHTML={{ __html: item.opisTurbia }}
               />
             </>
           ))}
@@ -91,13 +83,13 @@ const PoradniePoz = () => {
         <br></br>
         <h1 className="text-center">Poradnia pielęgniarki POZ w Zbydniowie</h1>
         {values &&
-          values["poradniaPielegniarki123"] &&
-          values["poradniaPielegniarki123"].map((item: any) => (
+          values["poradniePoz123"] &&
+          values["poradniePoz123"].map((item: any) => (
             <>
               <h2
                 key={item.id}
                 className="whitespace-pre-wrap"
-                dangerouslySetInnerHTML={{ __html: item.opis }}
+                dangerouslySetInnerHTML={{ __html: item.opisPielegniarka }}
               />
             </>
           ))}
@@ -106,13 +98,13 @@ const PoradniePoz = () => {
         <br></br>
 
         {values &&
-          values["poradniaPoloznej123"] &&
-          values["poradniaPoloznej123"].map((item: any) => (
+          values["poradniePoz123"] &&
+          values["poradniePoz123"].map((item: any) => (
             <>
               <h2
                 key={item.id}
                 className="whitespace-pre-wrap"
-                dangerouslySetInnerHTML={{ __html: item.opis }}
+                dangerouslySetInnerHTML={{ __html: item.opisPolozna }}
               />
             </>
           ))}
