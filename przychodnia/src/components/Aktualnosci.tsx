@@ -32,36 +32,49 @@ const Aktualnosci = () => {
     reverseValues = [...values["aktualnosci123"]].reverse();
     defaultPicture = values.zdjeciaDomyslne123;
   }
-  console.log(defaultPicture);
+
   return (
-    <div className="flex justify-center content-center AppDD w-full bg-red-300">
-      <div className="flex w-10/12  items-center bg-red-500">
-        {reverseValues && reverseValues[0] ? (
-          <AktualnosciModul
-            news={reverseValues[0]}
-            defaultPicture={defaultPicture}
-          />
-        ) : null}
-      </div>
-      <div className="flex-col w-10/12  items-center bg-red-500">
-        {reverseValues && reverseValues[1] ? (
-          <AktualnosciModul
-            news={reverseValues[1]}
-            defaultPicture={defaultPicture}
-          />
-        ) : null}
-        {reverseValues && reverseValues[2] ? (
-          <AktualnosciModul
-            news={reverseValues[2]}
-            defaultPicture={defaultPicture}
-          />
-        ) : null}
-        {reverseValues && reverseValues[3] ? (
-          <AktualnosciModul
-            news={reverseValues[3]}
-            defaultPicture={defaultPicture}
-          />
-        ) : null}
+    <div className="AppDD flex justify-center content-center items-center w-full bg-red-300">
+      <div className=" flex-col w-9/12 justify-center content-center items-center bg-red-500">
+        <h1 className="text-center">Aktualności</h1>
+        <div className=" flex justify-center content-center  bg-red-200 gap-5">
+          <div className="flex-col items-start content-start">
+            {reverseValues && reverseValues[0] ? (
+              <AktualnosciModul
+                news={reverseValues[0]}
+                defaultPicture={defaultPicture[0]}
+                size={"big"}
+              />
+            ) : null}
+          </div>
+          <div className="flex-col items-center">
+            {reverseValues && reverseValues[1] ? (
+              <div className="border-b-2 border-solid border-green-700 ">
+                <AktualnosciModul
+                  news={reverseValues[1]}
+                  defaultPicture={defaultPicture[1]}
+                  size={"small"}
+                />{" "}
+              </div>
+            ) : null}
+            {reverseValues && reverseValues[2] ? (
+              <div className="border-b-2 border-solid border-green-700 ">
+                <AktualnosciModul
+                  news={reverseValues[2]}
+                  defaultPicture={defaultPicture[2]}
+                  size={"small"}
+                />
+              </div>
+            ) : null}
+            {reverseValues && reverseValues[3] ? (
+              <AktualnosciModul
+                news={reverseValues[3]}
+                defaultPicture={defaultPicture[3]}
+                size={"small"}
+              />
+            ) : null}
+          </div>
+        </div>
       </div>
     </div>
   );
