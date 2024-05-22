@@ -34,9 +34,9 @@ const Aktualnosci = () => {
   }
 
   return (
-    <div className="AppDD flex justify-center content-center items-center w-full bg-red-300">
-      <div className=" flex-col w-9/12 justify-center content-center items-center bg-red-500">
-        <h1 className="text-center">Aktualności</h1>
+    <div className="AppDD flex justify-center content-center items-center w-full bg-red-300 py-10">
+      <div className=" flex-col w-9/12 justify-center content-center items-center bg-red-500 ">
+        <h1 className="text-center py-10">Aktualności</h1>
         <div className=" flex justify-center content-center  bg-red-200 gap-5">
           <div className="flex-col items-start content-start">
             {reverseValues && reverseValues[0] ? (

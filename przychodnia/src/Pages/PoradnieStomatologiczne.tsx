@@ -32,9 +32,8 @@ const PoradnieStomatologiczne = () => {
 
   return (
     <div className="flex justify-center items-center AppEE">
-      <div className="flex flex-col justify-center items-center w-10/12 bg-red-100 px-28 py-10 text-left">
+      <div className="flex flex-col justify-center items-center w-10/12 bg-red-100 px-28 py-10 text-left gap-4">
         <h1 className="text-center">Poradnie stomatologiczne:</h1>
-        <br></br>
         {values &&
           values["poradnieStomatologiczne123"] &&
           values["poradnieStomatologiczne123"].map((item: any) => (

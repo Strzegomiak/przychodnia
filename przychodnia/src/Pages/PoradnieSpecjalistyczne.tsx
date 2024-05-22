@@ -32,9 +32,8 @@ const PoradnieSpecjalistyczne = () => {
 
   return (
     <div className="flex justify-center items-center AppEE">
-      <div className="flex flex-col justify-center items-center w-10/12 bg-red-100 px-28 py-10 text-left">
+      <div className="flex flex-col justify-center items-center w-10/12 bg-red-100 px-28 py-10 text-left gap-4">
         <h1 className="text-center">Poradnie specjalistyczne:</h1>
-        <br></br>
         {values &&
           values["poradnieSpecjalistyczne123"] &&
           values["poradnieSpecjalistyczne123"].map((item: any) => (

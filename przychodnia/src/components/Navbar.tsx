@@ -55,7 +55,7 @@ const Navbar = () => {
         </li>
         {activeProfile === "profile2" && (
           <div
-            className="absolute h-22 inset-y-24 inset-x-48 w-60"
+            className="absolute h-22 inset-y-24 inset-x-48 w-64"
             onMouseEnter={() => handleMouseEnter("profile2")}
             onMouseLeave={handleMouseLeave}
             onClick={() => setActiveProfile(null)}

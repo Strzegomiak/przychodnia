@@ -15,12 +15,21 @@ export default function DenseTable({ valuesArray }: any) {
   });
 
   return (
-    <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
+    <TableContainer
+      component={Paper}
+      sx={{
+        maxWidth: 800,
+        minWidth: 350,
+        padding: "5px",
+      }}
+    >
+      <Table size="small" aria-label="a dense table">
         <TableHead>
           <TableRow>
-            <TableCell>Nazwa usługi</TableCell>
-            <TableCell align="right">Cena (zł)</TableCell>
+            <TableCell sx={{ fontWeight: "bold" }}>Nazwa usługi</TableCell>
+            <TableCell align="right" sx={{ fontWeight: "bold" }}>
+              Cena (zł)
+            </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
