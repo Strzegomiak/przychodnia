@@ -12,8 +12,8 @@ const Powtarzalny = ({
   const { values } = useFetch(query);
 
   return (
-    <div className="flex justify-center items-center AppEE">
-      <div className="flex flex-col justify-center items-center w-10/12 bg-red-100 px-28 py-10 text-left">
+    <div className="flex justify-center items-center AppEE bg-red-100">
+      <div className="flex flex-col justify-center items-center w-10/12  px-28 py-5 text-left">
         <h1 className="text-center">{title}</h1>
         <br></br>
         {values &&

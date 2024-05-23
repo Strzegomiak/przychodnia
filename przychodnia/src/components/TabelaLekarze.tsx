@@ -18,15 +18,30 @@ export default function DenseTable({ valuesArray }: any) {
   return (
     <TableContainer
       component={Paper}
-      sx={{ maxWidth: 800, minWidth: 350, padding: "5px" }}
+      sx={{
+        maxWidth: 900,
+        minWidth: 350,
+        padding: "5px",
+      }}
     >
       <Table size="small" aria-label="a dense table">
         <TableHead>
           <TableRow>
-            <TableCell sx={{ fontWeight: "bold" }}>
+            <TableCell
+              sx={{
+                fontFamily: "Poppins, sans-serif ",
+                fontWeight: "bold",
+              }}
+            >
               Lekarz przyjmujący
             </TableCell>
-            <TableCell align="right" sx={{ fontWeight: "bold" }}>
+            <TableCell
+              align="right"
+              sx={{
+                fontFamily: "Poppins, sans-serif",
+                fontWeight: "bold",
+              }}
+            >
               Dni tygodnia
             </TableCell>
           </TableRow>
@@ -37,11 +52,26 @@ export default function DenseTable({ valuesArray }: any) {
               key={row.name}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
             >
-              <TableCell component="th" scope="row">
+              <TableCell
+                component="th"
+                scope="row"
+                sx={{
+                  fontFamily: "Poppins, sans-serif",
+                  fontWeight: "300",
+                }}
+              >
                 <span>{row.name}, </span>
                 <span style={{ fontStyle: "italic" }}>{row.specjalizacja}</span>
               </TableCell>
-              <TableCell align="right">{row.days}</TableCell>
+              <TableCell
+                align="right"
+                sx={{
+                  fontFamily: "Poppins, sans-serif",
+                  fontWeight: "300",
+                }}
+              >
+                {row.days}
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>

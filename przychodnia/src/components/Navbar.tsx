@@ -55,7 +55,7 @@ const Navbar = () => {
         </li>
         {activeProfile === "profile2" && (
           <div
-            className="absolute h-22 inset-y-24 inset-x-48 w-64"
+            className="absolute h-22 inset-y-24 inset-x-48 w-72"
             onMouseEnter={() => handleMouseEnter("profile2")}
             onMouseLeave={handleMouseLeave}
             onClick={() => setActiveProfile(null)}
@@ -65,7 +65,7 @@ const Navbar = () => {
                 <li>Karta Praw Pacjenta</li>
               </Link>
               <Link to={"/rodo"}>
-                <li>RODO</li>
+                <li>Rodo</li>
               </Link>
               <Link to={"/skargiiwnioski"}>
                 <li>Skargi i wnioski</li>
@@ -87,7 +87,7 @@ const Navbar = () => {
         </li>
         {activeProfile === "profile3" && (
           <div
-            className="absolute h-22 inset-y-24 inset-x-96 w-80"
+            className="absolute h-22 inset-y-24 inset-x-96 w-96"
             onMouseEnter={() => handleMouseEnter("profile3")}
             onMouseLeave={handleMouseLeave}
             onClick={() => setActiveProfile(null)}

@@ -131,7 +131,7 @@ function App() {
               <Powtarzalny
                 query={kartaPrawQuery}
                 nameAPI="kartaPraw123"
-                title={"Karta Praw"}
+                title={"Karta Praw Pacjenta"}
               />
             }
           />

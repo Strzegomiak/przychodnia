@@ -26,8 +26,21 @@ export default function DenseTable({ valuesArray }: any) {
       <Table size="small" aria-label="a dense table">
         <TableHead>
           <TableRow>
-            <TableCell sx={{ fontWeight: "bold" }}>Nazwa usługi</TableCell>
-            <TableCell align="right" sx={{ fontWeight: "bold" }}>
+            <TableCell
+              sx={{
+                fontFamily: "Poppins, sans-serif ",
+                fontWeight: "bold",
+              }}
+            >
+              Nazwa usługi
+            </TableCell>
+            <TableCell
+              align="right"
+              sx={{
+                fontFamily: "Poppins, sans-serif ",
+                fontWeight: "bold",
+              }}
+            >
               Cena (zł)
             </TableCell>
           </TableRow>
@@ -38,10 +51,25 @@ export default function DenseTable({ valuesArray }: any) {
               key={row.name}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
             >
-              <TableCell component="th" scope="row">
+              <TableCell
+                component="th"
+                scope="row"
+                sx={{
+                  fontFamily: "Poppins, sans-serif ",
+                  fontWeight: "300",
+                }}
+              >
                 {row.name}
               </TableCell>
-              <TableCell align="right">{row.price}</TableCell>
+              <TableCell
+                align="right"
+                sx={{
+                  fontFamily: "Poppins, sans-serif",
+                  fontWeight: "300",
+                }}
+              >
+                {row.price}
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>

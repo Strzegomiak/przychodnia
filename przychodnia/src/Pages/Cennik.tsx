@@ -25,37 +25,39 @@ const Cennik = () => {
   console.log(valuesGinekologia);
 
   return (
-    <div className="flex justify-center items-center">
-      <div className="flex flex-col justify-center items-center w-10/12 bg-red-100 px-28 py-10 text-left">
-        <h1 className="text-center">
-          Cennik usług obowiązujący w Samodzielnym Publicznym Gminny Zakładzie
-          Opieki Zdrowotnej w Zaleszanach z/s w Zbydniowie
-        </h1>
+    <div className="flex justify-center items-center bg-red-100">
+      <div className="flex flex-col justify-center items-center w-10/12  px-28 py-10 text-left">
+        <h1 className="text-center">Cennik usług</h1>
+        <br></br>
+        <h2 className="text-center">
+          Obowiązujący w Samodzielnym Publicznym Gminny Zakładzie Opieki
+          Zdrowotnej w Zaleszanach z/s w Zbydniowie
+        </h2>
         <br></br>
         <div>
-          <div>
-            <h2>PORADNIA POZ</h2>
+          <div className="flex flex-col gap-2">
+            <h2>Poradnia POZ</h2>
             <DenseTable valuesArray={valuesPoz} />
-            <br></br>
           </div>
-          <div>
-            <h2>PORADNIA GINEKOLOGICZNA</h2>
+          <br></br>
+          <div className="flex flex-col gap-2">
+            <h2>Poradnia Ginekologiczna</h2>
             <DenseTable valuesArray={valuesGinekologia} />
           </div>
           <br></br>
-          <div>
-            <h2>PORADNIA REHABILITACYJNA</h2>
+          <div className="flex flex-col gap-2">
+            <h2>Poradnia rehabilitacyjna</h2>
             <DenseTable valuesArray={valuesPoradniaRehabilitacyjna} />
           </div>
           <br></br>
 
-          <div>
-            <h2>GABINET ZABIEGOWY</h2>
+          <div className="flex flex-col gap-2">
+            <h2>Gabinet zabiegowy</h2>
             <DenseTable valuesArray={valuesRehabilitacja} />
           </div>
           <br></br>
-          <div>
-            <h2>REHABILITACJA</h2>
+          <div className="flex flex-col gap-2">
+            <h2>Rehabilitacja</h2>
             <DenseTable valuesArray={valuesZabiegowy} />
           </div>
           <br></br>

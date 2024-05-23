@@ -35,10 +35,10 @@ const PoradniePoz = () => {
   console.log(values);
 
   return (
-    <div className="flex justify-center items-center AppEE">
-      <div className="flex flex-col justify-center items-center w-10/12 bg-red-100 px-28 py-7 text-left">
-        <div className="flex flex-col justify-center items-center w-9/12 bg-red-100 px-28 py-7 text-left gap-4">
-          <h1 className="text-center">PORADNIE POZ:</h1>
+    <div className="flex justify-center items-center AppEE bg-red-100">
+      <div className="flex flex-col justify-center items-center w-10/12   px-28 py-7 text-left">
+        <div className="flex flex-col justify-center items-center w-10/12   px-28 py-7 text-left gap-4">
+          <h1 className="text-center">Poradnie POZ</h1>
           <h2 className="text-center">Poradnia POZ w Zbydniowie</h2>
           {values &&
             values["poradniePoz123"] &&
@@ -96,7 +96,7 @@ const PoradniePoz = () => {
               </>
             ))}
           <br></br>
-          <h1 className="text-center">Poradnia położnej POZ w Zbydniowie:</h1>
+          <h1 className="text-center">Poradnia położnej POZ w Zbydniowie</h1>
 
           {values &&
             values["poradniePoz123"] &&

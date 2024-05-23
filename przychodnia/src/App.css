@@ -3,9 +3,8 @@
 @tailwind utilities;
 
 body {
-  font-family: "Arimo", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -15,7 +14,7 @@ body {
 }
 
 .AppEE {
-  min-height: 52vh;
+  min-height: 50vh;
 }
 
 .AppDD {

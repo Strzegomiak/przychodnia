@@ -26,7 +26,7 @@ const AktualnosciModul: React.FC<AktualnosciModulProps> = ({
     <div
       className={`${
         size === "big" ? "flex-col text-l " : "flex text-sm justify-start"
-      } bg-red-700  content-between py-5 `}
+      }   content-between py-5 `}
     >
       {news.zdjecie && news.zdjecie.url ? (
         <img
@@ -54,12 +54,12 @@ const AktualnosciModul: React.FC<AktualnosciModulProps> = ({
       <div
         className={`${
           size === "big" ? "" : "w-96"
-        } flex-col px-5 content-between bg-yellow-200`}
+        } flex-col px-5 content-between `}
         style={size === "big" ? { width: "685px" } : { height: "200px" }}
       >
         <h2
           className={`${
-            size === "big" ? "text-xl font-bold py-5" : ""
+            size === "big" ? "text-xl font-medium py-5" : "font-medium"
           } text-center`}
         >
           {news.tytul}
