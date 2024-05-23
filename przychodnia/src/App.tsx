@@ -14,6 +14,7 @@ import PoradnieSpecjalistyczne from "./Pages/PoradnieSpecjalistyczne";
 import PracowniaRehabilitacji from "./Pages/PracowniaRehabilitacji";
 import PlikiDoPobrania from "./Pages/PlikiDoPobrania";
 import MapGoogle from "./components/MapGoogle";
+import Aktualnosci from "./Pages/Aktualnosci";
 
 const dyrekcjaQuery = gql`
   {
@@ -115,6 +116,8 @@ function App() {
               />
             }
           />
+          <Route path="/aktualnosci" element={<Aktualnosci />} />
+
           <Route
             path="/dyrekcja"
             element={

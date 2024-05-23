@@ -1,13 +1,13 @@
 const LogoLinks = () => {
   return (
-    <div className="flex-col justify-center content-center w-full">
-      <div className="flex justify-center content-center w-full bg-blue-400">
+    <div className=" flex-col justify-center content-center w-full bg-white">
+      <div className=" HeaderAndFooter flex justify-center content-center w-full">
         <div className="flex items-center justify-center w-4/12 cursor-pointer">
           <img
             src="../images/RPP.jpg"
             title="Rzecznik Praw Pacjenta"
             alt="Rzecznik Praw Pacjenta"
-            className=""
+            className="ImageRadius"
             onClick={() =>
               (window.location.href = "https://www.gov.pl/web/rpp/kontakt")
             }

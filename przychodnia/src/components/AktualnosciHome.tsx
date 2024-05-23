@@ -24,7 +24,7 @@ const aktualnosciQuery = gql`
   }
 `;
 // [1,2,3] jak dodajemy nowe [1,2,3,4] wiec zawsze 4 ostatnie ma brać z czego ostatnie to MAIN
-const Aktualnosci = () => {
+const AktualnosciHome = () => {
   const { values } = useFetch(aktualnosciQuery);
   let reverseValues;
   let defaultPicture;
@@ -34,7 +34,7 @@ const Aktualnosci = () => {
   }
 
   return (
-    <div className="AppDD flex justify-center content-center items-center bg-red-300 w-full">
+    <div className="AktualnosciStyle flex justify-center content-center items-center w-full">
       <div className=" flex-col w-9/12 justify-center content-center items-center  py-5">
         <h1 className="text-center py-5 Podkreslenie">Aktualności</h1>
         <div className=" flex justify-center content-center   gap-5">
@@ -49,7 +49,7 @@ const Aktualnosci = () => {
           </div>
           <div className="flex-col items-center">
             {reverseValues && reverseValues[1] ? (
-              <div className="border-b-2 border-solid border-green-700 ">
+              <div className="LineBetweenImg ">
                 <AktualnosciModul
                   news={reverseValues[1]}
                   defaultPicture={defaultPicture[1]}
@@ -58,7 +58,7 @@ const Aktualnosci = () => {
               </div>
             ) : null}
             {reverseValues && reverseValues[2] ? (
-              <div className="border-b-2 border-solid border-green-700 ">
+              <div className="LineBetweenImg ">
                 <AktualnosciModul
                   news={reverseValues[2]}
                   defaultPicture={defaultPicture[2]}
@@ -80,4 +80,4 @@ const Aktualnosci = () => {
   );
 };
 
-export default Aktualnosci;
+export default AktualnosciHome;

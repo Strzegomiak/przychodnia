@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 interface Zdjecie {
   url: string;
@@ -9,6 +10,7 @@ interface News {
   dataOpublikowania: string;
   opisSkrotowy: string;
   zdjecie?: Zdjecie;
+  opis: string;
 }
 
 interface AktualnosciModulProps {
@@ -23,25 +25,16 @@ const AktualnosciModul: React.FC<AktualnosciModulProps> = ({
   size,
 }) => {
   return (
-    <div
-      className={`${
-        size === "big" ? "flex-col text-l " : "flex text-sm justify-start"
-      }   content-between py-5 `}
-    >
-      {news.zdjecie && news.zdjecie.url ? (
-        <img
-          src={news.zdjecie.url}
-          alt={news.tytul}
-          style={
-            size === "big"
-              ? { width: "685px", height: "390px" }
-              : { width: "293px", height: "195px" }
-          }
-        />
-      ) : (
-        defaultPicture && (
+    <Link to="/aktualnosci" state={{ news, defaultPicture }}>
+      <div
+        className={`${
+          size === "big" ? "flex-col text-l " : "flex text-sm justify-start"
+        }   content-between py-5 `}
+      >
+        {news.zdjecie && news.zdjecie.url ? (
           <img
-            src={defaultPicture.zdjecie.url}
+            className="ImageRadius"
+            src={news.zdjecie.url}
             alt={news.tytul}
             style={
               size === "big"
@@ -49,27 +42,40 @@ const AktualnosciModul: React.FC<AktualnosciModulProps> = ({
                 : { width: "293px", height: "195px" }
             }
           />
-        )
-      )}
-      <div
-        className={`${
-          size === "big" ? "" : "w-96"
-        } flex-col px-5 content-between `}
-        style={size === "big" ? { width: "685px" } : { height: "200px" }}
-      >
-        <h2
+        ) : (
+          defaultPicture && (
+            <img
+              className="ImageRadius"
+              src={defaultPicture.zdjecie.url}
+              alt={news.tytul}
+              style={
+                size === "big"
+                  ? { width: "685px", height: "390px" }
+                  : { width: "293px", height: "195px" }
+              }
+            />
+          )
+        )}
+        <div
           className={`${
-            size === "big" ? "text-xl font-medium py-5" : "font-medium"
-          } text-center`}
+            size === "big" ? "" : "w-96"
+          } flex-col px-5 content-between `}
+          style={size === "big" ? { width: "685px" } : { height: "200px" }}
         >
-          {news.tytul}
-        </h2>
-        <br></br>
-        <h2 className="text-left italic">{news.dataOpublikowania}</h2>
-        <br></br>
-        <h2 className="text-left">{news.opisSkrotowy}</h2>
+          <h2
+            className={`${
+              size === "big" ? "text-xl font-medium py-5" : "font-medium"
+            } text-center`}
+          >
+            {news.tytul}
+          </h2>
+          <br></br>
+          <h2 className="text-left italic">{news.dataOpublikowania}</h2>
+          <br></br>
+          <h2 className="text-left">{news.opisSkrotowy}</h2>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

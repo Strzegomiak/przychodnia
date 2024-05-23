@@ -1,4 +1,4 @@
-import Aktualnosci from "../components/Aktualnosci";
+import Aktualnosci from "../components/AktualnosciHome";
 import LogoLinks from "../components/LogoLinks";
 import MapGoogle from "../components/MapGoogle";
 import Photo from "../components/Photo";

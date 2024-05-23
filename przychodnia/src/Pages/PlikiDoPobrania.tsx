@@ -20,7 +20,7 @@ const PlikiDoPobrania = () => {
 
   console.log(values);
   return (
-    <div className="flex justify-center items-center AppEE bg-red-100">
+    <div className="flex justify-center items-center AppEE  ">
       <div className="flex flex-col justify-center items-center w-10/12    px-28 py-10 text-left">
         <h1>Pliki do Pobrania</h1>
         <br></br>

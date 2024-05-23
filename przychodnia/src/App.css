@@ -4,8 +4,10 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
+  color: #04555c;
+  background: #affaf2;
 }
 
 .App {
@@ -14,13 +16,69 @@ body {
 }
 
 .AppEE {
-  min-height: 50vh;
+  min-height: 52vh;
 }
 
-.AppDD {
+.AktualnosciStyle {
   min-height: 70vh;
+  color: #04555c;
 }
 
 h1 {
   font-size: 2.5rem; /* Wartość text-xl w tailwindcss */
+}
+
+.ImageRadius {
+  -webkit-transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-radius: 7px;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.HeaderAndFooter {
+  background: linear-gradient(115deg, #affaf2, #31bff7);
+  color: black;
+}
+
+.LineBetweenImg {
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: #4bcdcf;
+}
+
+.NavbarStyle {
+  background: #048e9c;
+  color: #affaf2;
+}
+
+.NavbarUL {
+  -webkit-transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-radius: 7px;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  background: #026873;
+}
+
+.NavbarStyle li {
+  padding: 7px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 7px;
+}
+
+.NavbarStyle li:hover {
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  cursor: pointer;
+}
+
+.NavbarStyle li:active {
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  color: #04555c;
 }

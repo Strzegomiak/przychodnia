@@ -19,8 +19,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex justify-center content-center bg-red-400 w-full h-24 ">
-      <ul className="flex gap-12 items-center text-2xl relative">
+    <nav className="NavbarStyle flex justify-center content-center w-full h-24 ">
+      <ul className="flex gap-4 items-center text-2xl relative ">
         <Link to={"/"}>
           <li>Start</li>
         </Link>
@@ -37,7 +37,7 @@ const Navbar = () => {
             onMouseLeave={handleMouseLeave}
             onClick={() => setActiveProfile(null)}
           >
-            <ul className="bg-red-600 p-4 gap-2">
+            <ul className="NavbarUL p-4 gap-2 w-44">
               <Link to={"/historia"}>
                 <li>Historia</li>
               </Link>
@@ -60,7 +60,7 @@ const Navbar = () => {
             onMouseLeave={handleMouseLeave}
             onClick={() => setActiveProfile(null)}
           >
-            <ul className="bg-blue-600 p-4 gap-2">
+            <ul className="NavbarUL p-4 gap-2 w-80">
               <Link to={"/kartapraw"}>
                 <li>Karta Praw Pacjenta</li>
               </Link>
@@ -92,7 +92,7 @@ const Navbar = () => {
             onMouseLeave={handleMouseLeave}
             onClick={() => setActiveProfile(null)}
           >
-            <ul className="bg-green-600 p-4 gap-2">
+            <ul className="NavbarUL p-4 gap-2">
               <Link to={"/poradniepoz"}>
                 <li>Poradnie POZ</li>
               </Link>
