@@ -65,7 +65,7 @@ const Navbar = () => {
                 <li>Karta Praw Pacjenta</li>
               </Link>
               <Link to={"/rodo"}>
-                <li>Rodo</li>
+                <li>RODO</li>
               </Link>
               <Link to={"/skargiiwnioski"}>
                 <li>Skargi i wnioski</li>

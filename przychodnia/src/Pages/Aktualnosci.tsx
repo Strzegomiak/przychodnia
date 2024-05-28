@@ -49,7 +49,9 @@ const Aktualnosci: React.FC<AktualnosciProps> = () => {
           </h2>
           <h2 className="text-left italic">{news && news.dataOpublikowania}</h2>
           <br></br>
-          <h2 className="text-left">{news && news.opis}</h2>
+          <h2 className="text-left" style={news && { width: "800px" }}>
+            {news && news.opis}
+          </h2>
         </div>
       </div>
     </div>

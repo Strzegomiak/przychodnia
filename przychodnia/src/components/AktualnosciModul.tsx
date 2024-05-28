@@ -64,15 +64,20 @@ const AktualnosciModul: React.FC<AktualnosciModulProps> = ({
         >
           <h2
             className={`${
-              size === "big" ? "text-xl font-medium py-5" : "font-medium"
-            } text-center`}
+              size === "big" ? "text-xl py-5" : ""
+            } text-center font-medium`}
           >
             {news.tytul}
           </h2>
           <br></br>
           <h2 className="text-left italic">{news.dataOpublikowania}</h2>
           <br></br>
-          <h2 className="text-left">{news.opisSkrotowy}</h2>
+          <h2
+            className="text-left  "
+            style={size === "big" ? { width: "630px" } : { height: "140px" }}
+          >
+            {news.opisSkrotowy}
+          </h2>
         </div>
       </div>
     </Link>

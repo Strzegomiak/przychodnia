@@ -141,7 +141,7 @@ function App() {
           <Route
             path="/rodo"
             element={
-              <Powtarzalny query={rodoOpis} nameAPI="rodo123" title={"Rodo"} />
+              <Powtarzalny query={rodoOpis} nameAPI="rodo123" title={"RODO"} />
             }
           />
           <Route
