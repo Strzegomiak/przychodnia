@@ -36,7 +36,7 @@ const AktualnosciHome = () => {
   return (
     <div className="AktualnosciStyle flex-col justify-center content-center items-center w-full py-5">
       <h1 className="text-center py-5">Aktualności</h1>
-      <div className="lg:flex-row lg:flex-wrap flex flex-col flex-nowrap justify-center content-center gap-5 px-5">
+      <div className="lg:flex-row lg:flex-nowrap flex flex-col flex-wrap justify-center content-center gap-5 px-5">
         <div className="flex-col items-start content-start">
           {reverseValues && reverseValues[0] ? (
             <AktualnosciModul
@@ -46,7 +46,7 @@ const AktualnosciHome = () => {
             />
           ) : null}
         </div>
-        <div className="flex-col items-center">
+        <div className="md:flex hidden flex-col items-center ">
           {reverseValues && reverseValues[1] ? (
             <div className="LineBetweenImg ">
               <AktualnosciModul

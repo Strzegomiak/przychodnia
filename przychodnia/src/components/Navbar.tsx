@@ -19,8 +19,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="NavbarStyle flex justify-center content-center w-full h-24 ">
-      <ul className="flex gap-4 items-center text-2xl relative ">
+    <nav className="NavbarStyle flex justify-center content-center w-full h-auto">
+      <ul className=" flex flex-row flex-wrap-reverse gap-2 justify-center items-center text-2xl relative my-5">
         <Link to={"/"}>
           <li>Start</li>
         </Link>
@@ -32,7 +32,7 @@ const Navbar = () => {
         </li>
         {activeProfile === "profile1" && (
           <div
-            className="absolute h-22 inset-y-24 inset-x-20 w-32"
+            className="navbarMenu111 absolute h-22  w-32"
             onMouseEnter={() => handleMouseEnter("profile1")}
             onMouseLeave={handleMouseLeave}
             onClick={() => setActiveProfile(null)}
@@ -55,7 +55,7 @@ const Navbar = () => {
         </li>
         {activeProfile === "profile2" && (
           <div
-            className="absolute h-22 inset-y-24 inset-x-48 w-72"
+            className="navbarMenu222 absolute h-22 w-72"
             onMouseEnter={() => handleMouseEnter("profile2")}
             onMouseLeave={handleMouseLeave}
             onClick={() => setActiveProfile(null)}
@@ -87,7 +87,7 @@ const Navbar = () => {
         </li>
         {activeProfile === "profile3" && (
           <div
-            className="absolute h-22 inset-y-24 inset-x-96 w-96"
+            className="navbarMenu333 absolute h-22  w-96"
             onMouseEnter={() => handleMouseEnter("profile3")}
             onMouseLeave={handleMouseLeave}
             onClick={() => setActiveProfile(null)}

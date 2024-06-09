@@ -61,7 +61,7 @@ const AktualnosciModul: React.FC<AktualnosciModulProps> = ({
                 />
               ) : (
                 <img
-                  className="ImageRadius Responsive-img"
+                  className="ImageRadius Responsive-img "
                   src={defaultPicture.zdjecie.url}
                   alt={news.tytul}
                   style={{ width: "293px", height: "195px" }}
@@ -87,7 +87,7 @@ const AktualnosciModul: React.FC<AktualnosciModulProps> = ({
           <h2 className="text-left italic">{news.dataOpublikowania}</h2>
           <br></br>
           <h2
-            className="text-left"
+            className="text-left mb-10 md:mb-0"
             style={size === "big" ? { height: "140px" } : { height: "140px" }}
           >
             {news.opisSkrotowy}

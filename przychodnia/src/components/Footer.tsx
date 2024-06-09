@@ -6,15 +6,13 @@ import MailIcon from "@mui/icons-material/Mail";
 const Footer = () => {
   return (
     <footer className="flex justify-center content-center w-full HeaderAndFooter">
-      <div className="flex justify-center items-center h-64  gap-20 text-xl">
-        <div className="flex-col flex  ">
-          <h2 className="font-medium">
+      <div className="xl:flex-row xl:h-64 xl:gap-20 sm:h-96 sm:flex sm:my-0 sm:mx-0 flex-col justify-center items-center h-auto my-10 mx-5 gap-10 text-xl">
+        <div className="flex-col flex sm:mb-0 mb-7">
+          <h2 className="font-medium flex flex-row">
             <HealthAndSafetyIcon style={{ marginRight: "8px" }} />
             Samodzielny Publiczny Gminny Zakład Opieki Zdrowotnej
           </h2>
-          <h2 className="font-medium ml-8">
-            w Zaleszanach z/s w Zbydniowie
-          </h2>
+          <h2 className="font-medium ml-8">w Zaleszanach z/s w Zbydniowie</h2>
           <br></br>
           <h2 className="ml-8">ul. Parkowa 8 37-415 Zbydniów</h2>
 
@@ -29,7 +27,7 @@ const Footer = () => {
           </h2>
           <h2 className="ml-8">lek.med. Małgorzata Szczykutowicz-Bryniak</h2>
           <br></br>
-          <div className="flex gap-7">
+          <div className="sm:flex-row flex flex-col gap-7">
             <div>
               <h2 className="font-medium">
                 <PhoneIcon style={{ marginRight: "8px" }} />

@@ -87,8 +87,54 @@ h1 {
   color: #04555c;
 }
 
+.NavbarStyle .navbarMenu111 {
+  top: 4rem;
+  bottom: 4rem;
+  left: 5rem;
+  right: 5rem;
+}
+
+.NavbarStyle .navbarMenu222 {
+  top: 4rem;
+  bottom: 4rem;
+  left: 12rem;
+  right: 12rem;
+}
+
+.NavbarStyle .navbarMenu333 {
+  top: 4rem;
+  bottom: 4rem;
+  left: 24rem;
+  right: 24rem;
+}
+
 @media (min-width: 1024px) and (max-width: 1280px) {
   .Responsive-img {
     display: none;
   }
 }
+
+@media (min-width: 629px) and (max-width: 741px) {
+  .NavbarStyle .navbarMenu111 {
+    top: 7.5rem;
+    bottom: 7.5rem;
+    left: 7rem;
+    right: 7rem;
+  }
+
+  .NavbarStyle .navbarMenu222 {
+    top: 7.5rem;
+    bottom: 7.5rem;
+    left: 11rem;
+    right: 11rem;
+  }
+
+  .NavbarStyle .navbarMenu333 {
+    top: 7.5rem;
+    bottom: 7.5rem;
+    left: 17rem;
+    right: 17rem;
+  }
+}
+
+/* od 628 zrobić flex-col i wysuwanie podmenu */
