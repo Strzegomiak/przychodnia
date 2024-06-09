@@ -82,7 +82,7 @@ const opiekaCalodobowaQuery = gql`
 function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen flex-col ">
+      <div className="min-h-screen flex-col">
         <HeaderInfo />
         <Navbar />
         <Routes>

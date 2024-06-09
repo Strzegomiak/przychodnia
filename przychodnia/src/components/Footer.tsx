@@ -12,7 +12,7 @@ const Footer = () => {
             <HealthAndSafetyIcon style={{ marginRight: "8px" }} />
             Samodzielny Publiczny Gminny Zakład Opieki Zdrowotnej
           </h2>
-          <h2 className="font-medium Podkreslenie ml-8">
+          <h2 className="font-medium ml-8">
             w Zaleszanach z/s w Zbydniowie
           </h2>
           <br></br>
@@ -23,7 +23,7 @@ const Footer = () => {
           </h2>
         </div>
         <div className="flex-col flex ">
-          <h2 className="font-medium Podkreslenie">
+          <h2 className="font-medium">
             <AccountCircleIcon style={{ marginRight: "8px" }} />
             Kierownik
           </h2>
@@ -31,14 +31,14 @@ const Footer = () => {
           <br></br>
           <div className="flex gap-7">
             <div>
-              <h2 className="font-medium Podkreslenie">
+              <h2 className="font-medium">
                 <PhoneIcon style={{ marginRight: "8px" }} />
                 Telefon
               </h2>
               <h2 className="ml-8">tel. 15 845 83 05</h2>
             </div>
             <div>
-              <h2 className="font-medium Podkreslenie">
+              <h2 className="font-medium">
                 <MailIcon style={{ marginRight: "8px" }} />
                 e-mail
               </h2>

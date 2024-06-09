@@ -29,38 +29,52 @@ const AktualnosciModul: React.FC<AktualnosciModulProps> = ({
       <div
         className={`${
           size === "big" ? "flex-col text-l " : "flex text-sm justify-start"
-        }   content-between py-5 `}
+        }   content-between py-5`}
       >
         {news.zdjecie && news.zdjecie.url ? (
-          <img
-            className="ImageRadius"
-            src={news.zdjecie.url}
-            alt={news.tytul}
-            style={
-              size === "big"
-                ? { width: "685px", height: "390px" }
-                : { width: "293px", height: "195px" }
-            }
-          />
+          <div className="flex">
+            {size === "big" ? (
+              <img
+                className="ImageRadius"
+                src={news.zdjecie.url}
+                alt={news.tytul}
+                style={{ width: "685px", height: "390px" }}
+              />
+            ) : (
+              <img
+                className="ImageRadius Responsive-img"
+                src={news.zdjecie.url}
+                alt={news.tytul}
+                style={{ width: "293px", height: "195px" }}
+              />
+            )}
+          </div>
         ) : (
           defaultPicture && (
-            <img
-              className="ImageRadius"
-              src={defaultPicture.zdjecie.url}
-              alt={news.tytul}
-              style={
-                size === "big"
-                  ? { width: "685px", height: "390px" }
-                  : { width: "293px", height: "195px" }
-              }
-            />
+            <div className="flex">
+              {size === "big" ? (
+                <img
+                  className="ImageRadius"
+                  src={defaultPicture.zdjecie.url}
+                  alt={news.tytul}
+                  style={{ width: "685px", height: "390px" }}
+                />
+              ) : (
+                <img
+                  className="ImageRadius Responsive-img"
+                  src={defaultPicture.zdjecie.url}
+                  alt={news.tytul}
+                  style={{ width: "293px", height: "195px" }}
+                />
+              )}
+            </div>
           )
         )}
         <div
           className={`${
             size === "big" ? "" : "w-96"
           } flex-col px-5 content-between `}
-          style={size === "big" ? { width: "685px" } : { height: "200px" }}
+          style={size === "big" ? { maxWidth: "685px" } : { height: "200px" }}
         >
           <h2
             className={`${
@@ -73,8 +87,8 @@ const AktualnosciModul: React.FC<AktualnosciModulProps> = ({
           <h2 className="text-left italic">{news.dataOpublikowania}</h2>
           <br></br>
           <h2
-            className="text-left  "
-            style={size === "big" ? { width: "630px" } : { height: "140px" }}
+            className="text-left"
+            style={size === "big" ? { height: "140px" } : { height: "140px" }}
           >
             {news.opisSkrotowy}
           </h2>

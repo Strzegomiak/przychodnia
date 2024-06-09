@@ -25,7 +25,7 @@ const Aktualnosci: React.FC<AktualnosciProps> = () => {
   console.log(news, defaultPicture);
 
   return (
-    <div className="flex justify-center items-center AppEE ">
+    <div className="flex justify-center items-center AppEE  ">
       <div className="flex flex-col justify-center items-center w-10/12  px-28 py-12 text-left ">
         {news && news.zdjecie && news.zdjecie.url ? (
           <img
