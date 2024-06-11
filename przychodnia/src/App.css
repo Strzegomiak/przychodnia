@@ -92,6 +92,7 @@ h1 {
   bottom: 4rem;
   left: 5rem;
   right: 5rem;
+  width: 9rem;
 }
 
 .NavbarStyle .navbarMenu222 {
@@ -99,6 +100,7 @@ h1 {
   bottom: 4rem;
   left: 12rem;
   right: 12rem;
+  width: 18rem;
 }
 
 .NavbarStyle .navbarMenu333 {
@@ -106,6 +108,7 @@ h1 {
   bottom: 4rem;
   left: 24rem;
   right: 24rem;
+  width: 24rem;
 }
 
 @media (min-width: 1024px) and (max-width: 1280px) {
@@ -114,7 +117,13 @@ h1 {
   }
 }
 
-@media (min-width: 629px) and (max-width: 741px) {
+@media (max-width: 1536px) {
+  .AppMobile {
+    padding: 15px 5px 15px 5px;
+  }
+}
+
+@media (min-width: 651px) and (max-width: 741px) {
   .NavbarStyle .navbarMenu111 {
     top: 7.5rem;
     bottom: 7.5rem;
@@ -137,30 +146,56 @@ h1 {
   }
 }
 
-@media (max-width: 628px) {
+@media (max-width: 650px) {
+  .navbarNormal {
+    display: none;
+  }
+
+  .navbarMobile {
+    display: flex;
+  }
+
   .NavbarStyle .NavbarRowOrCol {
     flex-direction: column;
+    align-items: center;
   }
   .NavbarStyle .navbarMenu111 {
-    top: 7.5rem;
-    bottom: 7.5rem;
-    left: 7rem;
-    right: 7rem;
+    top: 45.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 288px;
   }
 
   .NavbarStyle .navbarMenu222 {
-    top: 7.5rem;
-    bottom: 7.5rem;
-    left: 11rem;
-    right: 11rem;
+    top: 49.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 288px;
   }
 
   .NavbarStyle .navbarMenu333 {
-    top: 7.5rem;
-    bottom: 7.5rem;
-    left: 17rem;
-    right: 17rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 288px;
+  }
+
+  .NavbarStyle .ppp {
+    width: 288px;
+    text-align: center;
+  }
+
+  .NavbarStyle .xxx {
+    background-color: #0cb7c7;
+    color: white;
+    font-weight: 500;
+  }
+
+  .zzz {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 83%;
   }
 }
-
-/* od 628 zrobić flex-col i wysuwanie podmenu */

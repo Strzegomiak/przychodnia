@@ -32,7 +32,7 @@ const PoradnieSpecjalistyczne = () => {
 
   return (
     <div className="flex justify-center items-center AppEE  ">
-      <div className="flex flex-col justify-center items-center w-10/12 px-28 py-10 text-left gap-4">
+      <div className="AppMobile flex flex-col justify-center items-center w-10/12 px-28 py-10 text-left gap-4">
         <h1 className="text-center">Poradnie specjalistyczne</h1>
         {values &&
           values["poradnieSpecjalistyczne123"] &&

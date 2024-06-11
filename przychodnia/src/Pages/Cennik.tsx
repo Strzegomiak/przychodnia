@@ -25,8 +25,8 @@ const Cennik = () => {
   console.log(valuesGinekologia);
 
   return (
-    <div className="flex justify-center items-center  ">
-      <div className="flex flex-col justify-center items-center w-10/12  px-28 py-10 text-left">
+    <div className="  flex justify-center items-center ">
+      <div className="AppMobile  flex flex-col justify-center items-center w-10/12  px-28 py-10 text-left">
         <h1 className="text-center">Cennik usług</h1>
         <br></br>
         <h2 className="text-center">
@@ -34,30 +34,29 @@ const Cennik = () => {
           Zdrowotnej w Zaleszanach z/s w Zbydniowie
         </h2>
         <br></br>
-        <div>
-          <div className="flex flex-col gap-2">
-            <h2>Poradnia POZ</h2>
+        <div className="zzz   ">
+          <div className=" flex flex-col gap-2">
+            <h2 className="text-center">Poradnia POZ</h2>
             <DenseTable valuesArray={valuesPoz} />
           </div>
           <br></br>
           <div className="flex flex-col gap-2">
-            <h2>Poradnia Ginekologiczna</h2>
+            <h2 className="text-center">Poradnia Ginekologiczna</h2>
             <DenseTable valuesArray={valuesGinekologia} />
           </div>
           <br></br>
           <div className="flex flex-col gap-2">
-            <h2>Poradnia rehabilitacyjna</h2>
+            <h2 className="text-center">Poradnia rehabilitacyjna</h2>
             <DenseTable valuesArray={valuesPoradniaRehabilitacyjna} />
           </div>
           <br></br>
-
           <div className="flex flex-col gap-2">
-            <h2>Gabinet zabiegowy</h2>
+            <h2 className="text-center">Gabinet zabiegowy</h2>
             <DenseTable valuesArray={valuesRehabilitacja} />
           </div>
           <br></br>
           <div className="flex flex-col gap-2">
-            <h2>Rehabilitacja</h2>
+            <h2 className="text-center">Rehabilitacja</h2>
             <DenseTable valuesArray={valuesZabiegowy} />
           </div>
           <br></br>
