@@ -137,4 +137,30 @@ h1 {
   }
 }
 
+@media (max-width: 628px) {
+  .NavbarStyle .NavbarRowOrCol {
+    flex-direction: column;
+  }
+  .NavbarStyle .navbarMenu111 {
+    top: 7.5rem;
+    bottom: 7.5rem;
+    left: 7rem;
+    right: 7rem;
+  }
+
+  .NavbarStyle .navbarMenu222 {
+    top: 7.5rem;
+    bottom: 7.5rem;
+    left: 11rem;
+    right: 11rem;
+  }
+
+  .NavbarStyle .navbarMenu333 {
+    top: 7.5rem;
+    bottom: 7.5rem;
+    left: 17rem;
+    right: 17rem;
+  }
+}
+
 /* od 628 zrobić flex-col i wysuwanie podmenu */

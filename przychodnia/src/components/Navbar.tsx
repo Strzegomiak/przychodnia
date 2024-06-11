@@ -20,7 +20,7 @@ const Navbar = () => {
 
   return (
     <nav className="NavbarStyle flex justify-center content-center w-full h-auto">
-      <ul className=" flex flex-row flex-wrap-reverse gap-2 justify-center items-center text-2xl relative my-5">
+      <ul className="NavbarRowOrCol flex flex-wrap-reverse gap-2 justify-center items-center text-2xl relative my-5">
         <Link to={"/"}>
           <li>Start</li>
         </Link>
