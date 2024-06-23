@@ -32,6 +32,7 @@ const Aktualnosci: React.FC<AktualnosciProps> = () => {
             className="ImageRadius"
             src={news.zdjecie.url}
             alt={news.tytul}
+            style={{ maxWidth: "685px" }}
           />
         ) : (
           news &&
