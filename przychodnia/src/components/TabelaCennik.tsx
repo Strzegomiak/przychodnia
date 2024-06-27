@@ -57,6 +57,7 @@ export default function DenseTable({ valuesArray }: any) {
                 sx={{
                   fontFamily: "Poppins, sans-serif ",
                   fontWeight: "300",
+                  wordBreak: "break-word",
                 }}
               >
                 {row.name}
