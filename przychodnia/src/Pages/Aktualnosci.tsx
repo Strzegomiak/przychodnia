@@ -26,7 +26,7 @@ const Aktualnosci: React.FC<AktualnosciProps> = () => {
 
   return (
     <div className="flex justify-center items-center AppEE  ">
-      <div className="flex flex-col justify-center items-center w-10/12  px-28 py-12 text-left ">
+      <div className="flex flex-col justify-center items-center w-10/12  px-5 py-12 text-left ">
         {news && news.zdjecie && news.zdjecie.url ? (
           <img
             className="ImageRadius"
@@ -50,7 +50,7 @@ const Aktualnosci: React.FC<AktualnosciProps> = () => {
           </h2>
           <h2 className="text-left italic">{news && news.dataOpublikowania}</h2>
           <br></br>
-          <h2 className="text-left" style={news && { width: "800px" }}>
+          <h2 className="text-left" style={news && { maxWidth: "800px" }}>
             {news && news.opis}
           </h2>
         </div>
