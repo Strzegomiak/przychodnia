@@ -87,6 +87,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+          {/* Przekierowanie na stronę główną dla wszystkich innych ścieżek */}
+          <Route path="/*" element={<Home />} />
           <Route path="/cennik" element={<Cennik />} />
           <Route path="/plikidopobrania" element={<PlikiDoPobrania />} />
           <Route
